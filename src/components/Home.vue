@@ -15,12 +15,28 @@
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
             :key="meetup.id"
-          ></v-carousel-item>
+          >
+            <div class="title">
+              {{ meetup.title }}
+            </div>
+          </v-carousel-item>
         </v-carousel>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
+
+<style scoped>
+  .title {
+    position: absolute;
+    bottom: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+  }
+</style>
+
 
 <script>
   export default {
