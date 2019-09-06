@@ -15,6 +15,7 @@
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
             :key="meetup.id"
+            @click="onLoadMeetup(meetup.id)"
           >
             <div class="title">
               {{ meetup.title }}
@@ -43,11 +44,17 @@
     data () {
       return {
         meetups: [
-          { imageUrl: "https://blog.hotelscombined.com/wp-content/uploads/2016/12/New-York-Times-Square.jpg", id: "dsgsgsd335", title: "Meetup in New York"},
+          { imageUrl: "https://blog.hotelscombined.com/wp-content/uploads/2016/12/New-York-Times-Square.jpg", id: "1", title: "Meetup in New York"},
           {
             imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQue7DMZ_lbT8lV8a23Lx6JZ9S71uix3W07SWfE1pFPe-bAl-EZ", id: "dfdsgdsg", title: "Meetup in New York"
           }
         ]
+      }
+    },
+
+    methods: {
+      onLoadMeetup(id) {
+        this.$router.push("/meetups/" + id)
       }
     }
   }
