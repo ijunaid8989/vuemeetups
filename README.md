@@ -1,4 +1,5 @@
 # d-meeting-app
+Vuetify + Vuex + Firebase
 
 ## Project setup
 ```
