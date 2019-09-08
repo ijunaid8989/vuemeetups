@@ -41,14 +41,9 @@
 
 <script>
   export default {
-    data () {
-      return {
-        meetups: [
-          { imageUrl: "https://blog.hotelscombined.com/wp-content/uploads/2016/12/New-York-Times-Square.jpg", id: "1", title: "Meetup in New York"},
-          {
-            imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQue7DMZ_lbT8lV8a23Lx6JZ9S71uix3W07SWfE1pFPe-bAl-EZ", id: "dfdsgdsg", title: "Meetup in New York"
-          }
-        ]
+    computed: {
+      meetups () {
+        return this.$store.getters.featuredMeetups
       }
     },
 
